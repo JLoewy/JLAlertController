@@ -12,6 +12,10 @@
 		030EDC271CEBD9820090B3BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030EDC251CEBD9820090B3BC /* Main.storyboard */; };
 		030EDC291CEBD9820090B3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030EDC281CEBD9820090B3BC /* Assets.xcassets */; };
 		030EDC2C1CEBD9820090B3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030EDC2A1CEBD9820090B3BC /* LaunchScreen.storyboard */; };
+		030EDC361CEBD9CA0090B3BC /* JLAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030EDC341CEBD9CA0090B3BC /* JLAlertViewController.swift */; };
+		030EDC371CEBD9CA0090B3BC /* JLAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030EDC351CEBD9CA0090B3BC /* JLAlertViewController.xib */; };
+		034C7BB51CED8A1D00FB8B98 /* JLInputAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034C7BB41CED8A1D00FB8B98 /* JLInputAlertViewController.xib */; };
+		034C7BB71CED93D300FB8B98 /* JLAlertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C7BB61CED93D300FB8B98 /* JLAlertTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		030EDC281CEBD9820090B3BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030EDC2B1CEBD9820090B3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030EDC2D1CEBD9820090B3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		030EDC341CEBD9CA0090B3BC /* JLAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLAlertViewController.swift; path = "JLActionController Source/JLAlertViewController.swift"; sourceTree = "<group>"; };
+		030EDC351CEBD9CA0090B3BC /* JLAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JLAlertViewController.xib; path = "JLActionController Source/JLAlertViewController.xib"; sourceTree = "<group>"; };
+		034C7BB41CED8A1D00FB8B98 /* JLInputAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JLInputAlertViewController.xib; path = "JLActionController Source/JLInputAlertViewController.xib"; sourceTree = "<group>"; };
+		034C7BB61CED93D300FB8B98 /* JLAlertTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLAlertTextField.swift; path = "JLActionController Source/JLAlertTextField.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		030EDC201CEBD9820090B3BC /* JLActionController */ = {
 			isa = PBXGroup;
 			children = (
+				030EDC331CEBD99E0090B3BC /* JLActionController Source */,
 				030EDC211CEBD9820090B3BC /* AppDelegate.swift */,
 				030EDC231CEBD9820090B3BC /* ViewController.swift */,
 				030EDC251CEBD9820090B3BC /* Main.storyboard */,
@@ -62,6 +71,17 @@
 				030EDC2D1CEBD9820090B3BC /* Info.plist */,
 			);
 			path = JLActionController;
+			sourceTree = "<group>";
+		};
+		030EDC331CEBD99E0090B3BC /* JLActionController Source */ = {
+			isa = PBXGroup;
+			children = (
+				030EDC341CEBD9CA0090B3BC /* JLAlertViewController.swift */,
+				030EDC351CEBD9CA0090B3BC /* JLAlertViewController.xib */,
+				034C7BB41CED8A1D00FB8B98 /* JLInputAlertViewController.xib */,
+				034C7BB61CED93D300FB8B98 /* JLAlertTextField.swift */,
+			);
+			name = "JLActionController Source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +142,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034C7BB51CED8A1D00FB8B98 /* JLInputAlertViewController.xib in Resources */,
 				030EDC2C1CEBD9820090B3BC /* LaunchScreen.storyboard in Resources */,
 				030EDC291CEBD9820090B3BC /* Assets.xcassets in Resources */,
+				030EDC371CEBD9CA0090B3BC /* JLAlertViewController.xib in Resources */,
 				030EDC271CEBD9820090B3BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034C7BB71CED93D300FB8B98 /* JLAlertTextField.swift in Sources */,
+				030EDC361CEBD9CA0090B3BC /* JLAlertViewController.swift in Sources */,
 				030EDC241CEBD9820090B3BC /* ViewController.swift in Sources */,
 				030EDC221CEBD9820090B3BC /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +310,7 @@
 				030EDC321CEBD9820090B3BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
