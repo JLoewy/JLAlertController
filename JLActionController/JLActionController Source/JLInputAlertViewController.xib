@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+        </mutableArray>
+        <mutableArray key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JLAlertViewController" customModule="JLActionController" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="FZv-c5-12m" id="wKQ-LD-gmi"/>
+                <outlet property="cancelButton" destination="x0S-Xe-vkv" id="daG-1T-eF4"/>
+                <outlet property="inputField" destination="Thw-p5-0bK" id="4VH-9n-hFq"/>
+                <outlet property="regularButton" destination="34J-hx-jWf" id="vXg-dQ-1OE"/>
+                <outlet property="titleLabel" destination="Dzx-Z0-0cN" id="EFK-K1-Cwy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-c5-12m">
+                    <rect key="frame" x="20" y="214" width="280" height="166"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzx-Z0-0cN">
+                            <rect key="frame" x="15" y="15" width="257" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="40M-1G-Tcd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0S-Xe-vkv">
+                            <rect key="frame" x="149" y="120" width="48" height="29"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="IoW-jE-3zM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34J-hx-jWf">
+                            <rect key="frame" x="212" y="120" width="53" height="29"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                            <state key="normal" title="Regular"/>
+                            <connections>
+                                <action selector="regularButtonTapped:" destination="-1" eventType="touchUpInside" id="0A6-bG-jL2"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thw-p5-0bK" customClass="JLAlertTextField" customModule="JLActionController" customModuleProvider="target">
+                            <rect key="frame" x="15" y="65" width="257" height="30"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="0Aj-LF-FO5"/>
+                        <constraint firstItem="Dzx-Z0-0cN" firstAttribute="leading" secondItem="Thw-p5-0bK" secondAttribute="leading" id="3p2-8g-3ew"/>
+                        <constraint firstAttribute="bottom" secondItem="34J-hx-jWf" secondAttribute="bottom" constant="17" id="Afa-75-es9"/>
+                        <constraint firstItem="Dzx-Z0-0cN" firstAttribute="leading" secondItem="FZv-c5-12m" secondAttribute="leading" constant="15" id="BIk-sF-kRx"/>
+                        <constraint firstItem="34J-hx-jWf" firstAttribute="leading" secondItem="x0S-Xe-vkv" secondAttribute="trailing" constant="15" id="GMM-4s-G16"/>
+                        <constraint firstAttribute="trailing" secondItem="Dzx-Z0-0cN" secondAttribute="trailing" constant="8" id="MqR-O1-zIl"/>
+                        <constraint firstItem="Dzx-Z0-0cN" firstAttribute="trailing" secondItem="Thw-p5-0bK" secondAttribute="trailing" id="Vrt-eI-EUF"/>
+                        <constraint firstAttribute="bottom" secondItem="x0S-Xe-vkv" secondAttribute="bottom" constant="17" id="Wp9-GQ-PaV"/>
+                        <constraint firstItem="Dzx-Z0-0cN" firstAttribute="top" secondItem="FZv-c5-12m" secondAttribute="top" constant="15" id="fhP-lM-pay"/>
+                        <constraint firstAttribute="trailing" secondItem="34J-hx-jWf" secondAttribute="trailing" constant="15" id="fpK-tt-Tce"/>
+                        <constraint firstItem="x0S-Xe-vkv" firstAttribute="top" secondItem="Thw-p5-0bK" secondAttribute="bottom" constant="25" id="j4G-YC-NgK"/>
+                        <constraint firstItem="Thw-p5-0bK" firstAttribute="top" secondItem="Dzx-Z0-0cN" secondAttribute="bottom" constant="29" id="rkH-Jb-Lxn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="FZv-c5-12m" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="13.5" identifier="alertview-center-y" id="0pQ-C1-tAb"/>
+                <constraint firstItem="FZv-c5-12m" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jK3-PO-Hl1"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
