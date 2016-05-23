@@ -232,32 +232,35 @@ class JLAlertViewController: UIViewController {
     /// Responsible for displaying the alert controller over the topmost active view controller
     func show()
     {
-        var topViewController = UIApplication.sharedApplication().delegate!.window!!.rootViewController!
-        while topViewController.presentedViewController != nil {
-            topViewController = topViewController.presentedViewController!
+        if let appDelegate = UIApplication.sharedApplication().delegate, let window = appDelegate.window, let rootViewController = window?.rootViewController {
+            
+            var topViewController = rootViewController
+            while topViewController.presentedViewController != nil {
+                topViewController = topViewController.presentedViewController!
+            }
+            
+            // Add the alert view controller to the top most UIViewController of the application
+            topViewController.addChildViewController(self)
+            topViewController.view.addSubview(view)
+            viewWillAppear(true)
+            didMoveToParentViewController(topViewController)
+            view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+            view.alpha = 0.0
+            view.frame = topViewController.view.bounds
+            
+            alertView.alpha     = 0.0
+            UIView.animateWithDuration(0.2, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
+                self.view.alpha = 1.0
+                }, completion: nil)
+            
+            alertView.transform = CGAffineTransformMakeScale(1.05, 1.05)
+            alertView.center    = CGPoint(x: (self.view.bounds.size.width/2.0), y: (self.view.bounds.size.height/2.0)-10)
+            UIView.animateWithDuration(0.2, delay: 0.1, options: .CurveEaseOut, animations: { () -> Void in
+                self.alertView.alpha = 1.0
+                self.alertView.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                self.alertView.center    = CGPoint(x: (self.view.bounds.size.width/2.0), y: (self.view.bounds.size.height/2.0))
+                }, completion: nil)
         }
-        
-        // Add the alert view controller to the top most UIViewController of the application
-        topViewController.addChildViewController(self)
-        topViewController.view.addSubview(view)
-        viewWillAppear(true)
-        didMoveToParentViewController(topViewController)
-        view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        view.alpha = 0.0
-        view.frame = topViewController.view.bounds
-        
-        alertView.alpha     = 0.0
-        UIView.animateWithDuration(0.2, delay: 0.0, options: .CurveEaseOut, animations: { () -> Void in
-            self.view.alpha = 1.0
-            }, completion: nil)
-        
-        alertView.transform = CGAffineTransformMakeScale(1.05, 1.05)
-        alertView.center    = CGPoint(x: (self.view.bounds.size.width/2.0), y: (self.view.bounds.size.height/2.0)-10)
-        UIView.animateWithDuration(0.2, delay: 0.1, options: .CurveEaseOut, animations: { () -> Void in
-            self.alertView.alpha = 1.0
-            self.alertView.transform = CGAffineTransformMakeScale(1.0, 1.0)
-            self.alertView.center    = CGPoint(x: (self.view.bounds.size.width/2.0), y: (self.view.bounds.size.height/2.0))
-            }, completion: nil)
     }
     
     /**
