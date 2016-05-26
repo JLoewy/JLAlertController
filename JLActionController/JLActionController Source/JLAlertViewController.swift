@@ -185,6 +185,7 @@ class JLAlertViewController: UIViewController {
             regularButton.setTitle(regularText, forState: .Normal)
             if inputStyle.isInputType() {
                 regularButton.setTitleColor(disabledButtonColor, forState: .Normal)
+                regularButton.enabled = false
             }
             else {
                 regularButton.setTitleColor(enabledButtonColor, forState: .Normal)
